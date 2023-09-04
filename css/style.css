@@ -1,0 +1,263 @@
+/*COLORES*/
+:root {
+    --var-negro: #1f1f1f;
+    --var-azul: #30343F;
+    --var-celeste: #1D84B5;
+    --var-rosa: #FF1654;
+    --var-rojo: #FF3333;
+}
+
+/*FUENTES*/
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+/*ESTILOS GENERALES*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+/*HEADER*/
+
+.navbar {
+    height: 144px;
+    background-color: var(--var-azul);
+}
+
+.container-fluid {
+    justify-content: space-between;
+}
+
+.header-right {
+    margin-right: 70px;
+}
+
+.header-left {
+    margin-left: 70px;
+}
+
+.header-left img {
+    width: 372px;
+    height: 65px;
+}
+
+.nav-item a {
+    color: white;
+    font-size: 20px;
+    margin-left: 40px;
+}
+
+/*HERO*/
+
+.hero {
+    width: 100%;
+    height: 388px;
+    background-image: url(../img/funkos-banner.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 70px;
+}
+
+.hero__container__title {
+    color: white;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.hero__container__subtitle {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.button-blanco {
+    width: 211px;
+    height: 47px;
+    border-radius: 50px;
+    font-family:  'Inter', sans-serif;
+    font-size: 20px;
+    border: white;
+}
+
+/*HOME*/
+
+.home {
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 80px;
+}
+
+.card-title {
+    font-size: 46px;
+}
+
+.card-text {
+    font-size: 24px;
+}
+
+.red-line {
+    color: var(--var-rojo);
+    margin: 20px 0px;
+    border: var(--var-rojo) solid 1px;
+}
+
+.button-black {
+    width: 291px;
+    height: 65px;
+    border-radius: 50px;
+    font-family:  'Inter', sans-serif;
+    font-size: 24px;
+    background-color: var(--var-azul);
+    color: white;
+}
+
+.home__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+}
+
+.home img {
+    width: 70%;
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 80px;
+}
+
+.news__title h2 {
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.news__articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.news__articles__product {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.news__articles__product__image {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.news__articles__product__image__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--var-rojo);
+    color: white;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    font-size: 14px;
+    top: 0;
+    right: 0;
+}
+
+.news__articles__product__image__label p {
+    margin: 0px;
+}
+
+.news__articles__product__image__photo img {
+    width: 350px;
+}
+
+.news__articles__product__description__title {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+.news__articles__product__description__subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+
+.news__articles__product__description__price {
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.news__articles__product__description__dues {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    color: var(--var-celeste);
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--var-azul);
+    width: 100%;
+    height: 343px;
+    padding: 20px 80px;
+}
+
+.footer__top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 80%;
+}
+
+.footer__top__left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.footer__top__left a {
+    color: white;
+    font-size: 20px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer__top__right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+    font-size: 20px;
+    color: white;
+}
