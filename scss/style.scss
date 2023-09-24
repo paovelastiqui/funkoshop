@@ -1,0 +1,19 @@
+//IMPORTS UTILITIES
+
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/maps";
+
+//IMPORTS VIEWS
+
+@import "./views/generales";
+@import "./views/header";
+@import "./views/hero";
+@import "./views/home";
+@import "./views/footer";
+@import "./views/shop";
+
+
+//IMPORTS RESPONSIVES
+
+@import "./responsives/responsives.scss";

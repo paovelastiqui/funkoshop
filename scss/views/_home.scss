@@ -1,0 +1,107 @@
+/*INICIO HOME*/
+
+.home {
+    @include flex;
+    height: 500px;
+    padding: 0px 80px;
+    &__text {
+        &__title {
+            .card-title {
+                font-size: 4.6rem;
+            }  
+        }
+        &__subtitle {
+           .card-text {
+                font-size: 2.4rem;
+            } 
+        }
+        &__line {
+            .red-line {
+                color: $var-rojo;
+                margin: 20px 0px;
+                border: $var-rojo solid 1px;
+            }
+        }
+        &__buttom {
+            .button-black {
+                @include sizes(291px, 65px);
+                @include font($inter, 2.4rem);
+                border-radius: 50px;
+                background-color: $var-azul;
+                color: $var-blanco;
+            }
+        }
+    }
+    &__image {
+        @include flex;
+        width: 600px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 80px;
+    &__title {
+        h2 {
+            font-size: 4.6rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }    
+    }
+    &__articles {
+        @include grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 20px 0px;
+        &__product {
+            display: flex;
+            flex-direction: column;
+            width: 360px;
+            &__image {
+                display: flex;
+                position: relative;
+                justify-content: center;
+                &__label {
+                    @include flex;
+                    @include sizes(100px, 30px);
+                    background-color: $var-rojo;
+                    color: $var-blanco;
+                    position: absolute;
+                    font-size: 1.4rem;
+                    top: 0;
+                    right: 0;
+                    p {
+                        margin: 0px;
+                    }
+                }
+                &__photo {
+                    img {
+                        width: 350px;
+                    }
+                }
+            }
+            &__description {
+                &__title {
+                    @include font($inter, 1.4rem);
+                }
+                &__subtitle {
+                    @include font($inter, 1.8rem);
+                    font-weight: bold;
+                }
+                &__price {
+                    @include font($inter, 1.6rem);
+                }
+                &__dues {
+                    @include font($inter, 1.2rem);
+                    font-weight: bold;
+                    color: $var-celeste;
+                }
+            }
+        }
+    }
+}
+
+/*FIN HOME*/
