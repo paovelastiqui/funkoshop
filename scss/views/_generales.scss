@@ -15,4 +15,10 @@ ul {
     list-style: none;
 }
 
+.titulo {
+    @include font($raleway, 4rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
 /*FIN GENERALES*/
