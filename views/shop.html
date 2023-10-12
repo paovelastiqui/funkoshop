@@ -6,6 +6,7 @@
     <title>FunkoShop - SHOP</title>
     <!--Referencias-->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shop.css">
     <!--Letras-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,245 +18,248 @@
 </head>
 <body>
     <!--Inicio Header-->
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img src="../img/branding/logo_light_horizontal.svg" alt="logo"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#shop" role="button" data-bs-toggle="dropdown" aria-expanded="false">SHOP</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contacto">CONTACTO</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#login">LOGIN</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#carrito"><img src="../img/icons/cart-icon.svg" alt="carrito"></a>
-                  </li>
-                </ul>
-              </div>
+    <header class="header">
+        <div class="header__left">
+            <img src="../img/branding/logo_light_horizontal.svg" alt="logo">
+        </div>
+        <div class="header__right">
+            <div class="header__right__menu">
+                <img class="menu" src="../img/icons/icons8-menu.svg" alt="menu">    
             </div>
-        </nav>
+            <ul class="nav__right__list">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#shop" role="button" data-bs-toggle="dropdown" aria-expanded="false">SHOP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contacto">CONTACTO</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./views/login.html">LOGIN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./views/carrito.html"><img src="../img/icons/cart-icon.svg" alt="carrito"></a>
+                </li>
+            </ul>
+        </div>
     </header>    
     <!--Fin Header-->
     
+    <section class="shop">
     <!--Filter-->
-    <div class="filter">
-        <div class="filter__buscar">
-            <label for="buscar" id="buscar">BUSCAR:</label>
-            <input type="input" name="buscar" id="buscar" value="item o categoria" />
-        </div>
-        <div class="filter__orden">
-            <label for="ordenar" id="ordenar">ORDENAR POR</label>
-            <select name="orden" id="orden">
-                <option value=""></option>
-                <option value="">Publicado recientemente</option>
-                <option value="">Mayor precio</option>
-                <option value="">Menor precio</option>
-            </select>
-        </div>
-        <div class="filter__precio">
-            <label for="precio" id="precio">PRECIO</label>
-            <div class="filter__precio__limites">
-                <label>MIN</label>
-                <input type="input" name="min" id="min" value="0" />
-                <p>-</p>
-                <label>MAX</label>
-                <input type="input" name="max" id="max" value="0" />
-            </div>
-        </div>
-        <div class="filter__filtro">
-            <label for="filtro" id="filtro">FILTRAR</label>
-            <div class="filter__filtro__inputs">
-                <input type="checkbox">NUEVOS<br>
-                <input type="checkbox">OFERTAS<br>
-                <input type="checkbox">EDICIÓN ESPECIAL<br>
-                <input type="checkbox">FAVORITOS    
-            </div>
-        </div> 
-    </div>
-    <!--Fin Filter-->
 
-    <!--Inicio Articles-->
-    <div class="articles">
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/star-wars/trooper-1.webp" alt="trooper-1">
+        <div class="filter__titulo">
+            <a class="nav-link dropdown-toggle" href="#filter" role="button" data-bs-toggle="dropdown" aria-expanded="false">FILTRAR</a>
+        </div>
+        <div class="filter">
+            <div class="filter__buscar">
+                <label for="buscar" id="buscar">BUSCAR:</label>
+                <input type="input" name="buscar" id="buscar" value="item o categoria" />
+            </div>
+            <div class="filter__orden">
+                <label for="ordenar" id="ordenar">ORDENAR POR</label>
+                <select name="orden" id="orden">
+                    <option value=""></option>
+                    <option value="">Publicado recientemente</option>
+                    <option value="">Mayor precio</option>
+                    <option value="">Menor precio</option>
+                </select>
+            </div>
+            <div class="filter__precio">
+                <label for="precio" id="precio">PRECIO</label>
+                <div class="filter__precio__limites">
+                    <label>MIN</label>
+                    <input type="input" name="min" id="min" value="0" />
+                    <p>-</p>
+                    <label>MAX</label>
+                    <input type="input" name="max" id="max" value="0" />
                 </div>
             </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">STAR WARS</p>
-                <p class="articles__product__description__subtitle">STORTROOPER LIGHTSABER</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
-
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
+            <div class="filter__filtro">
+                <label for="filtro" id="filtro">FILTRAR</label>
+                <div class="filter__filtro__inputs">
+                    <input type="checkbox"> NUEVOS<br>
+                    <input type="checkbox"> OFERTAS<br>
+                    <input type="checkbox"> EDICIÓN ESPECIAL<br>
+                    <input type="checkbox"> FAVORITOS    
                 </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1">
+            </div> 
+        </div>
+        <!--Fin Filter-->
+
+        
+        <div class="shop-principal">
+            <!--Inicio Articles-->
+            <div class="articles">
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/star-wars/trooper-1.webp" alt="trooper-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">STAR WARS</p>
+                        <p class="articles__product__description__subtitle">STORTROOPER LIGHTSABER</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">POKEMON</p>
+                        <p class="articles__product__description__subtitle">PIDGEOTTO</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/harry-potter/luna-1.webp" alt="pidgeotto-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">HARRY POTTER</p>
+                        <p class="articles__product__description__subtitle">LUNA LOVEGOOD LION MASK</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/star-wars/trooper-1.webp" alt="trooper-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">STAR WARS</p>
+                        <p class="articles__product__description__subtitle">STORTROOPER LIGHTSABER</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">POKEMON</p>
+                        <p class="articles__product__description__subtitle">PIDGEOTTO</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/harry-potter/luna-1.webp" alt="pidgeotto-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">HARRY POTTER</p>
+                        <p class="articles__product__description__subtitle">LUNA LOVEGOOD LION MASK</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/star-wars/trooper-1.webp" alt="trooper-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">STAR WARS</p>
+                        <p class="articles__product__description__subtitle">STORTROOPER LIGHTSABER</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">POKEMON</p>
+                        <p class="articles__product__description__subtitle">PIDGEOTTO</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
+                </div>
+
+                <div class="articles__product">
+                    <div class="articles__product__image">
+                        <div class="articles__product__image__label">
+                            <p>NUEVO</p>
+                        </div>
+                        <div class="articles__product__image__photo">
+                            <img src="../img/harry-potter/luna-1.webp" alt="pidgeotto-1">
+                        </div>
+                    </div>
+                    <div class="articles__product__description">
+                        <p class="articles__product__description__title">HARRY POTTER</p>
+                        <p class="articles__product__description__subtitle">LUNA LOVEGOOD LION MASK</p>
+                        <p class="articles__product__description__price">$ 1799,99</p>
+                        <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+                    </div>                
                 </div>
             </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">POKEMON</p>
-                <p class="articles__product__description__subtitle">PIDGEOTTO</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
+            <!--Fin Articles-->
 
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/harry-potter/luna-1.webp" alt="pidgeotto-1">
-                </div>
+            <!--Inicio Botones-->
+            <div class="botones">
+                <button type="button" id="btn-left" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true"><</button>
+                <button type="button" id="btn-2" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">1</button>
+                <button type="button" id="btn-1" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">2</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">...</button>
+                <button type="button" id="btn-1" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">9</button>
+                <button type="button" id="btn-2" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">10</button>
+                <button type="button" id="btn-right" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">></button>
             </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">HARRY POTTER</p>
-                <p class="articles__product__description__subtitle">LUNA LOVEGOOD LION MASK</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
+            <!--Fin Botones-->
         </div>
-
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/star-wars/trooper-1.webp" alt="trooper-1">
-                </div>
-            </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">STAR WARS</p>
-                <p class="articles__product__description__subtitle">STORTROOPER LIGHTSABER</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
-
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1">
-                </div>
-            </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">POKEMON</p>
-                <p class="articles__product__description__subtitle">PIDGEOTTO</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
-
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/harry-potter/luna-1.webp" alt="pidgeotto-1">
-                </div>
-            </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">HARRY POTTER</p>
-                <p class="articles__product__description__subtitle">LUNA LOVEGOOD LION MASK</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
-
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/star-wars/trooper-1.webp" alt="trooper-1">
-                </div>
-            </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">STAR WARS</p>
-                <p class="articles__product__description__subtitle">STORTROOPER LIGHTSABER</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
-
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1">
-                </div>
-            </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">POKEMON</p>
-                <p class="articles__product__description__subtitle">PIDGEOTTO</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
-
-        <div class="articles__product">
-            <div class="articles__product__image">
-                <div class="articles__product__image__label">
-                    <p>NUEVO</p>
-                </div>
-                <div class="articles__product__image__photo">
-                    <img src="../img/harry-potter/luna-1.webp" alt="pidgeotto-1">
-                </div>
-            </div>
-            <div class="articles__product__description">
-                <p class="articles__product__description__title">HARRY POTTER</p>
-                <p class="articles__product__description__subtitle">LUNA LOVEGOOD LION MASK</p>
-                <p class="articles__product__description__price">$ 1799,99</p>
-                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-            </div>                
-        </div>
-    </div>
-    <!--Fin Articles-->
-
-    <!--Inicio Botones-->
-    <div class="botones">
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true"><</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">1</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">2</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">...</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">9</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">10</button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="button" aria-pressed="true">></button>
-    </div>
-    <!--Fin Botones-->
+       
+    </section>
+    
 
     <!--Inicio Footer-->
     <footer class="footer">
