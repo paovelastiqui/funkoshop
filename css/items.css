@@ -85,3 +85,75 @@
     color: #1D84B5; }
   
 /*FIN ITEMS*/  
+
+/*INICIO NEWS*/
+
+.news {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 8rem; }
+    
+.news__articles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    margin: 2rem 0px; 
+    height: 530px;  
+    position: relative;
+    overflow: scroll;
+    scroll-snap-type: x mandatory; }
+    
+.news__articles__product {
+    display: flex;
+    flex-direction: column;
+    width: 36rem;
+    padding: 1rem 3rem 2rem 3rem;
+    position: sticky;
+    scroll-snap-type: center; }
+        
+.news__articles__product__image {
+    display: flex;
+    position: relative;
+    justify-content: center; }
+          
+.news__articles__product__image__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    background-color: #FF3333;
+    color: white;
+    position: absolute;
+    font-size: 1.4rem;
+    top: 0;
+    right: 0; }
+            
+.news__articles__product__image__label p {
+    margin: 0px; }
+          
+.news__articles__product__image__photo img {
+    width: 350px; }
+        
+.news__articles__product__description__title {
+    font-family: "Inter", sans-serif;
+    font-size: 1.4rem; }
+
+.news__articles__product__description__subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold; }
+        
+
+.news__articles__product__description__price {
+    font-family: "Inter", sans-serif;
+    font-size: 1.6rem; }
+
+.news__articles__product__description__dues {
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1D84B5; }
+
+/*FIN NEWS*/
