@@ -1,10 +1,11 @@
 /*INICIO ITEMS*/
 .item {
-    display: grid;
-    grid-template-columns: 1fr 1fr; }
+    display: flex;
+    padding-top: 3rem;}
     
 .item__imagen {
-    padding-left: 4rem; }
+    padding-left: 4rem;
+    text-align: center; }
       
 .item__imagen img {
     width: 90%; }
@@ -47,11 +48,11 @@
     color: #4f4f4f;
     text-align: center; }
         
-.item__descripcion__selection__cambiar {
+.item__descripcion__selection__cantidad__cambiar {
     display: flex;
     flex-direction: column; }
           
-.item__descripcion__selection__cambiar button {
+.item__descripcion__selection__cantidad__cambiar button {
     width: 20px;
     height: 20px;
     font-size: 1.2rem;
@@ -83,6 +84,46 @@
     font-size: 1.4rem;
     font-weight: bold;
     color: #1D84B5; }
+
+/*RESPONSIVES ITEMS*/
+
+@media screen and (max-width: 676px) {
+    .item__descripcion__description {
+        font-size: 1.3rem;
+    }
+    /* .item__descripcion__selection {
+        flex-direction: column; } */
+    .item__descripcion__selection__cantidad input {
+            width: 95px;
+            height: 30px;
+            font-size: 1.7rem; }
+    .item__descripcion__selection__cantidad__cambiar button {
+        width: 15px;
+        height: 15px;
+        font-size: 1.1rem; }
+    .item__descripcion__selection__carrito {
+        margin-top: 1rem;
+    }
+    .item__descripcion__selection__carrito button {
+        width: 120px;
+        height: 30px;
+        font-size: 1.2rem; }
+    .item__descripcion__pago p, .item__descripcion__pago a {
+        font-size: 1.2rem; }
+}
+
+@media screen and (max-width: 576px) {
+    .item {
+        flex-direction: column;
+    }
+    .item__imagen {
+        padding: 0;
+    }
+    .item__imagen img {
+        width: 60%;
+    }
+}
+
   
 /*FIN ITEMS*/  
 
@@ -145,7 +186,6 @@
     font-size: 1.8rem;
     font-weight: bold; }
         
-
 .news__articles__product__description__price {
     font-family: "Inter", sans-serif;
     font-size: 1.6rem; }
@@ -157,3 +197,5 @@
     color: #1D84B5; }
 
 /*FIN NEWS*/
+
+

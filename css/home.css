@@ -157,7 +157,7 @@
 
 @media screen and (max-width: 992px) {
     .home {
-        padding: 2rem 6rem; }
+        padding: 2rem 3.5rem; }
 
     .home__text__title .card-title {
         font-size: 3.8rem; }
@@ -175,14 +175,14 @@
 @media screen and (max-width: 768px) {
     .home-1 {
         flex-direction: column; 
-        margin-top: 3rem;}
+        margin-top: 2.8rem;}
 
     .home-2 {
         flex-direction: column-reverse; 
-        margin-top: 3rem;}
+        margin-top: 2.8rem;}
 
     .home__text__title .card-title {
-        font-size: 3.8rem; }
+        font-size: 3.4rem; }
 
     .home__text__subtitle .card-text {
         font-size: 2rem; }
