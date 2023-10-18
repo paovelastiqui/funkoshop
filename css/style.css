@@ -1,3 +1,41 @@
+/* EXTERNALS */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+/* @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css'); */
+
+/* MISCELANEOUS */
+
+@import url('./utilities/variables.css');
+@import url('./utilities/generales.css');
+/* @import url('./misc/helpers.css');
+@import url('./misc/animations.css'); */
+
+/* PARTIALS */
+
+/* @import url('./partials/header.css');
+@import url('./partials/footer.css'); */
+
+/* COMPONENTS */
+
+/* @import url('./components/buttons.css');
+@import url('./components/form.css');
+@import url('./components/card.css');
+@import url('./components/slider.css'); */
+
+/* PAGES */
+
+@import url('./views/home.css');
+@import url('./views/shop.css');
+/* @import url('./views/carrito.css'); */
+@import url('./views/items.css');
+/* @import url('./views/admin.css'); */
+@import url('./views/login.css');
+@import url('./views/register.css');
+/* @import url('./views/create.css');
+@import url('./views/edit.css'); */
+
+
 /*COLORES*/
 
 :root {
@@ -9,47 +47,6 @@
   --var-rojo: #FF3333;
   --var-gris: #4f4f4f;
 }
-
-/*INICIO GENERALES*/
-
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif; }
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; }
-
-ul {
-  list-style: none; }
-
-.titulo {
-  font-family: "Raleway", sans-serif;
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 2rem; }
-
-.descripcion {
-  font-size: 2.7rem; }
-
-.boton-rojo {
-  background-color: var(--var-rojo);
-  color: var(--var-blanco);
-  border: 1px solid var(--var-rojo);
-  padding: 0.8rem 2.5rem;
-  font-size: 1.2rem; }
-
-/*RESPONSIVES GENERALES*/
-
-@media screen and (max-width: 576px) {
-  .titulo {
-    font-size: 2.8rem; }
-  .descripcion {
-    font-size: 1.8rem; }
-}
-
-/*FIN GENERALES*/
 
 /*INICIO MENU*/
 
@@ -209,7 +206,6 @@ ul {
 
 /*INICIO FOOTER*/
 .footer {
-  width: 100%;
   height: 35vh;
   background-color: #30343F;
   padding: 20px 80px; }
@@ -217,6 +213,7 @@ ul {
 .footer__top {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
   height: 80%; }
 
 .footer__top__left {
@@ -243,6 +240,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: bottom;
+  max-width: 1200px;
   font-size: 2rem;
   color: white; }
 

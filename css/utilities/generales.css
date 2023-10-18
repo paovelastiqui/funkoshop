@@ -1,0 +1,40 @@
+/*INICIO GENERALES*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif; }
+  
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; }
+  
+ul {
+    list-style: none; }
+  
+.titulo {
+    font-family: "Raleway", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem; }
+  
+.descripcion {
+    font-size: 2.7rem; }
+  
+.boton-rojo {
+    background-color: var(--var-rojo);
+    color: var(--var-blanco);
+    border: 1px solid var(--var-rojo);
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem; }
+  
+/*RESPONSIVES GENERALES*/
+  
+@media screen and (max-width: 576px) {
+    .titulo {
+      font-size: 2.8rem; }
+    .descripcion {
+      font-size: 1.8rem; }
+}
+  
+/*FIN GENERALES*/
