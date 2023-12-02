@@ -151,6 +151,15 @@
 .articles__product__image__photo img {
     width: 350px; }
       
+.img--back {
+    display: none; }
+    
+.articles__product__image__photo:hover .img--front{
+    display: none; }
+    
+.articles__product__image__photo:hover .img--back{
+    display: block; }
+    
 .articles__product__description__title {
     font-family: "Inter", sans-serif;
     font-size: 1.4rem; }

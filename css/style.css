@@ -1,8 +1,8 @@
 /* EXTERNALS */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
-/* @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
-@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css'); */
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
+@import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
 
 /* MISCELANEOUS */
 
@@ -99,15 +99,13 @@
 }
 
 .menu__link:hover{
-  background-color: #5e7094;
-}
+  background-color: #5e7094; }
 
 .menu__arrow{
   transform: var(--transform);
   transition: transform .3s;
   display: block;
-  margin-left: 3px;
-}
+  margin-left: 3px; }
 
 .menu__nesting{
   list-style: none;
@@ -119,15 +117,13 @@
   width: max-content;
   transform: translateY(100%);
   background-color: var(--var-azul);
-}
+  z-index: 1; }
 
 .menu__link--inside{
-  padding: 30px 100px 30px 20px;
-}
+  padding: 30px 100px 30px 20px; }
 
 .menu__link--inside:hover{
-  background-color: #798499;
-}
+  background-color: #798499; }
 
 .menu__hamburguer{
   height: 100%;
@@ -135,13 +131,11 @@
   align-items: center;
   padding: 0 15px;
   cursor: pointer;
-  display: none;
-}
+  display: none; }
 
 .menu__img{
   display: block;
-  width: 36px;
-}
+  width: 36px; }
 
 /*RESPONSIVES MENU*/
 
