@@ -2,27 +2,28 @@
 
 .hero {
     height: 80vh;
-    background-image: url(../../img/funkos-banner.webp);
+    background-image: url(../../multimedia/funkos-banner.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     align-items: center;
-    justify-content: left; }
+    justify-content: center; }
     
 .hero__container {
+    width: 100%;
     max-width: 1200px;
     padding: 5rem; }
 
 .hero__container__title {
-    color: white;
+    color: var(--light-font-solid);
     font-size: 3.8rem;
     font-weight: bold;
     margin-bottom: 0px; }
     
 .hero__container__subtitle {
-    color: white;
+    color: var(--light-font-solid);
     font-size: 1.8rem;
     margin-bottom: 40px; }
     
@@ -32,7 +33,7 @@
     font-family: "Inter", sans-serif;
     font-size: 2rem;
     border-radius: 50px;
-    border: white; }
+    border: var(--light-bg-solid); }
     
 /*RESPONSIVES HOME*/
   
@@ -55,9 +56,7 @@
 .home-1, .home-2 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    height: auto; }
+    align-items: center; }
   
 .home__text__title .card-title {
     font-size: 4.6rem; }
@@ -66,9 +65,9 @@
     font-size: 2.4rem; }
   
 .home__text__line .red-line {
-    color: #FF3333;
+    color: var(--primary-solid);
     margin: 2rem 0rem;
-    border: #FF3333 solid 1px; }
+    border: var(--primary-solid) solid 1px; }
   
 .home__text__buttom .button-black {
     width: 29rem;
@@ -93,29 +92,6 @@
     display: flex;
     flex-direction: column;
     padding: 2rem 8rem; }
-
-.news__title {
-    max-width: 1200px; }
-    
-/* .news__articles {
-    display: flex;
-    max-width: 1200px;
-    justify-content: space-between;
-    align-items: center;
-    left: 0;
-    margin: 2rem 0px; 
-    height: 530px;} */
-    /* position: relative; } */
-    /* overflow: scroll;
-    scroll-snap-type: x mandatory; } */
-    
-.news__articles__product {
-    display: flex;
-    flex-direction: column;
-    width: 36rem;
-    padding: 1rem 3rem 2rem 3rem; }
-    /* position: sticky;
-    scroll-snap-type: center; } */
         
 .news__articles__product__image {
     display: flex;
@@ -128,7 +104,7 @@
     align-items: center;
     width: 10rem;
     height: 3rem;
-    background-color: #FF3333;
+    background-color: var(--primary-solid);
     color: white;
     position: absolute;
     font-size: 1.4rem;
