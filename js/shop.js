@@ -48,6 +48,15 @@ const productos = [
         imagen_back: "../../multimedia/star-wars/trooper-box.webp",
         precio: 1799.99
     },
+    {
+        id: "remera-1-01",
+        titulo: "THE BOOK OF BOBA FETT",
+        categoria: "Remera",
+        licencia: "STAR WARS",
+        imagen_front: "../../multimedia/star-wars/re-grogu.png",
+        imagen_back: "../../multimedia/star-wars/re-grogu-box.png",
+        precio: 1799.99
+    },
 
     //POKEMON
     {
@@ -286,9 +295,70 @@ const productos = [
 ];
 
 const card = document.querySelector('#articles');
+// const menuesCategoria = document.querySelectorAll('.menu-categoria')
+
+// Filtrar productos por categoría
+const filteredFunkos = productos.filter(function (productos) {
+    return productos.categoria === "Funko";
+});
+
+const filteredRemeras = productos.filter(function (productos) {
+    return productos.categoria === "Remera";
+});
+
+const filteredLlaveros = productos.filter(function (productos) {
+    return productos.categoria === "Llavero";
+});
+
 
 function cargarProductos() {
-    productos.forEach(productos => {
+    filteredFunkos.forEach(productos => {
+
+        const div = document.createElement("div");
+        div.classList.add("articles__product");
+        div.innerHTML = `
+            <div class="articles__product__image">
+                <div class="articles__product__image__label">
+                    <p>NUEVO</p>
+                </div>
+                <div class="articles__product__image__photo">
+                    <img class="img--front" src="${productos.imagen_front}" alt="${productos.titulo}">
+                    <img class="img--back" src="${productos.imagen_back}" alt="${productos.titulo}">
+                </div>
+            </div>
+            <div class="articles__product__description">
+                <p class="articles__product__description__title">${productos.licencia}</p>
+                <p class="articles__product__description__subtitle">${productos.titulo}</p>
+                <p class="articles__product__description__price">${productos.precio}</p>
+                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+            </div>                
+        `;
+        card.append(div);
+    }),
+    filteredRemeras.forEach(productos => {
+
+        const div = document.createElement("div");
+        div.classList.add("articles__product");
+        div.innerHTML = `
+            <div class="articles__product__image">
+                <div class="articles__product__image__label">
+                    <p>NUEVO</p>
+                </div>
+                <div class="articles__product__image__photo">
+                    <img class="img--front" src="${productos.imagen_front}" alt="${productos.titulo}">
+                    <img class="img--back" src="${productos.imagen_back}" alt="${productos.titulo}">
+                </div>
+            </div>
+            <div class="articles__product__description">
+                <p class="articles__product__description__title">${productos.licencia}</p>
+                <p class="articles__product__description__subtitle">${productos.titulo}</p>
+                <p class="articles__product__description__price">${productos.precio}</p>
+                <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
+            </div>                
+        `;
+        card.append(div);
+    }),
+    filteredLlaveros.forEach(productos => {
 
         const div = document.createElement("div");
         div.classList.add("articles__product");
@@ -315,21 +385,21 @@ function cargarProductos() {
 
 cargarProductos();
 
+// menuesCategoria.forEach(boton => {
+//      a.addEventListener("click", (e) => {
+//          menuesCategoria.forEach(boton => boton.classList.remove("active"));
+//          e.currentTarget.classList.add("active");
 
-/* <div class="articles__product">
-        <div class="articles__product__image">
-            <div class="articles__product__image__label">
-                <p>NUEVO</p>
-            </div>
-            <div class="articles__product__image__photo">
-                <img class="img--front" src="../../multimedia/star-wars/trooper-1.webp" alt="trooper-1">
-                <img class="img--back" src="../../multimedia/star-wars/trooper-box.webp" alt="trooper-box">
-            </div>
-        </div>
-        <div class="articles__product__description">
-            <p class="articles__product__description__title">STAR WARS</p>
-            <p class="articles__product__description__subtitle">STORTROOPER LIGHTSABER</p>
-            <p class="articles__product__description__price">$ 1799,99</p>
-            <p class="articles__product__description__dues">3 CUOTAS SIN INTERÉS</p>
-        </div>                
-    </div> */
+//          if (e.currentTarget.id != "Funkos") {
+
+//              const productosCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
+//              tituloPrincipal.innerText = productosCategoria.categoria;
+
+//              const productosMenues = productos.filter(productos.categoria.id === e.currentTarget.id);
+//              cargarProductos(productosMenues);
+//          } else {
+//              cargarProductos(productos);
+//          }
+//      })
+//  })
+
