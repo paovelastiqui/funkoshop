@@ -9,6 +9,15 @@
       
 .item__imagen img {
     width: 90%; }
+
+.img--back {
+    display: none; }
+        
+.item__imagen:hover .img--front{
+    display: none; }
+        
+.item__imagen:hover .img--back{
+    display: block; }
     
 .item__descripcion {
     display: flex;

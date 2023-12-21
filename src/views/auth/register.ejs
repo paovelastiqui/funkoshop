@@ -1,0 +1,41 @@
+<%- include('../partials/header.ejs') %>
+    
+    <!--Register-->
+    <div class="register">
+        <h2 class="titulo">CREA TU CUENTA</h2>
+        <p class="descripcion">Completa el formulario para ser parte del mundo de los Funkos.</p>
+        <form class="register__form" action="" method="">
+            <div class="register__form__inputs">
+                <div class="register__form__inputs__nombre">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="name" id="nombre" required />    
+                </div>
+                <div class="register__form__inputs__apellido">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="name" id="apellido" required />    
+                </div>
+                <div class="register__form__inputs__email">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email" required />    
+                </div>
+                <div class="register__form__inputs__password">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" name="password" id="password" required />    
+                </div>
+                <div class="register__form__inputs__password">
+                    <label for="password">Repita Contraseña:</label>
+                    <input type="password" name="password" id="password2" required />    
+                </div>  
+            </div>
+            <div class="register__form__buttons">
+                <input class="boton-rojo" type="submit" value="Ingresar">
+                <div class="register__form__buttons__record">
+                    <input type="checkbox">
+                    <p>Acepto <a href="">términos y condiciones.</a></p>    
+                </div>  
+            </div>
+        </form>
+    </div>
+    <!--Fin Register-->
+
+<%- include('../partials/footer.ejs') %>
